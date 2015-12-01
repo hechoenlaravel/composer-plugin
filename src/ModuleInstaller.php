@@ -29,7 +29,6 @@ class ModuleInstaller extends LibraryInstaller
                 .'"vendor/jarvis-"'
             );
         }
-
-        return 'core/'.substr($ex[1], 6);
+        return 'modules/'.substr($ex[1], 6);
     }
 }
