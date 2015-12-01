@@ -31,4 +31,12 @@ class ModuleInstaller extends LibraryInstaller
         }
         return 'modules/'.substr($ex[1], 6);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function supports($packageType)
+    {
+        return 'jarvis_platform-module' === $packageType;
+    }
 }
