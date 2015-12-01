@@ -10,7 +10,7 @@ class ModuleInstaller extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function getPackageBasePath(PackageInterface $package)
+    public function getInstallPath(PackageInterface $package)
     {
         $ex = explode('/', $package->getPrettyName());
         if (!isset($ex[1])) {
