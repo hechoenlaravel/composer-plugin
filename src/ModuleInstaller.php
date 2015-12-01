@@ -12,24 +12,11 @@ class ModuleInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
-        $ex = explode('/', $package->getPrettyName());
-        if (!isset($ex[1])) {
-            throw new \InvalidArgumentException(
-                'Unable to install Module. '
-                .'it Should always start their package name with '
-                .'"vendor/jarvis-"'
-            );
+        $parts = explode('/', $package->getPrettyName());
+        if(count($parts) !== 2){
+            throw new \InvalidArgumentException('The package name is incorrect for '. $package->getPrettyName());
         }
-        $prefix = substr($ex[1], 0, 6);
-        if('jarvis-' !== $prefix)
-        {
-            throw new \InvalidArgumentException(
-                'Unable to install Module. '
-                .'it Should always start their package name with '
-                .'"vendor/jarvis-"'
-            );
-        }
-        return 'modules/'.$ex[0].'/'.$ex[1];
+        return 'modules/'.$parts[0].'/'.$parts['1'];
     }
 
     /**
