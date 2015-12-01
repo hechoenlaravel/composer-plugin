@@ -1,0 +1,16 @@
+{
+    "name": "hechoenlaravel/composer-plugin",
+    "type": "composer-plugin",
+    "require": {
+        "composer-plugin-api": "^1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hechoenlaravel\\JarvisPlatformComposerPlugin\\": "src/"
+        }
+    },
+    "extra": {
+        "class": "Hechoenlaravel\\JarvisPlatformComposerPlugin\\Plugin"
+    }
+}
