@@ -37,6 +37,6 @@ class ModuleInstaller extends LibraryInstaller
      */
     public function supports($packageType)
     {
-        return 'jarvis_platform-module' === $packageType;
+        return 'jarvis-platform-module' === $packageType;
     }
 }
